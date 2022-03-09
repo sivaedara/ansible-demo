@@ -67,3 +67,5 @@ web02
 
 ### To run a playbooks with host file
 ansible-playbook installhttpd.yaml -i ./hosts 
+
+### This is a test change
