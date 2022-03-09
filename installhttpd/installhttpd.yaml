@@ -1,0 +1,22 @@
+- hosts: webservers
+  become: yes
+
+  ## Tasks
+  tasks:
+  - name: Install apache2 packages 
+    apt:
+      name: apache2
+      state: latest
+
+  - name: ensure apache is runnuing
+    service:
+      name: apache2
+      enabled: yes
+
+  - name: copy index file from local machine
+    copy:
+      src: index.html 
+      dest: /usr/local/apache2/htdocs/index.html
+  
+  - name: enable and restart service for checking
+    shell: "systemctl enable apache2 && systemctl restart apache2"
