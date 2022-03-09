@@ -1,9 +1,9 @@
 ---
-- name: "wait 300 seconds as timeout"
+- name: "wait 10 seconds as timeout"
   wait_for_connection:
           delay: 5
           sleep: 5
-          timeout: 300
+          timeout: 10
 
 # Installing apache2 
 - name: "Install command packages"

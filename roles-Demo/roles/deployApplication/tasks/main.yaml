@@ -1,5 +1,5 @@
 ---
-- name: "wait 300 seconds"
+- name: "wait 10 seconds"
   wait_for_connection:
           delay: 5
           sleep: 5
@@ -15,3 +15,12 @@
 
 - name: "Run a cat command for testing"
   command: cat /var/www/html/index.html
+
+
+- name: "copy a shell file from local to host machine "
+  copy:
+          src: myscript.sh
+          dest: /tmp/myscript.sh
+          mode: '0777'
+  become: yes
+

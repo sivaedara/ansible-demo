@@ -16,7 +16,7 @@
   - name: copy index file from local machine
     copy:
       src: index.html 
-      dest: /usr/local/apache2/htdocs/index.html
+      dest: /var/www/html/index.html
   
   - name: enable and restart service for checking
     shell: "systemctl enable apache2 && systemctl restart apache2"
